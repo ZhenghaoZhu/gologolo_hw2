@@ -81,7 +81,8 @@ class TextEditSidebar extends Component {
           this.state.fontSize, 
           this.state.backgroundColor, 
           this.state.borderColor,
-          this.state.borderRadius);
+          this.state.borderRadius,
+          this.state.border);
     }
 
     render() {
@@ -138,7 +139,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Border Radius:</div>
                             <div className="col s8">
-                                <input type="range" min="4" max="144" 
+                                <input type="range" min="4" max="100" 
                                     onChange={this.handleBorderRadiusChange}
                                     value={this.props.logo.borderRadius} />
                             </div>
