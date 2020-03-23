@@ -47,6 +47,9 @@ class HomeScreen extends Component {
                             Create a New Logo
                         </button>
                     </div>
+                    <p class="range-field">
+                        <input type="range" id="test5" min="0" max="100" />
+                    </p>
                 </div>
             </div>
         )
