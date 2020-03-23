@@ -28,8 +28,8 @@ export class LogoLink extends Component {
 
         return (
             <div 
-                className='home_logo_link'                
-                style={ {cursor: "pointer"} }
+                className='home_logo_link'
+                id = 'home_logo_link'                
                 onClick={this.handleGoToLogo}
             >
                 {this.props.logo.text}<br />

@@ -29,7 +29,7 @@ class HomeScreen extends Component {
         return (
             <div className="container row">
                 <div className="col s4">
-                    <h3>Recent Work</h3>
+                    <h3 id = "recentWorkHomeScreen">Recent Work</h3>
                     <LogoLinks
                         logos={this.props.logos}                
                         goToLogoCallback={this.props.goToLogoCallback}
@@ -37,19 +37,15 @@ class HomeScreen extends Component {
                 </div>
                 <div className="col s8">
                     <div id="home_banner_container">
-                        @todo<br />
-                        List Maker
+                        Gologolo
                     </div>
                     <div>
                         <button
-                            style={{ cursor: "pointer" }}
+                            id = "newLogoButton"
                             onClick={this.handleAddNewLogo}>
                             Create a New Logo
                         </button>
                     </div>
-                    <p class="range-field">
-                        <input type="range" id="test5" min="0" max="100" />
-                    </p>
                 </div>
             </div>
         )
