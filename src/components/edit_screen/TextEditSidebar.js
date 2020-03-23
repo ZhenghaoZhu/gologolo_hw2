@@ -13,7 +13,8 @@ class TextEditSidebar extends Component {
             backgroundColor: this.props.logo.backgroundColor,
             borderColor: this.props.logo.borderColor,
             borderRadius: this.props.logo.borderRadius,
-            borderWidth: this.props.logo.borderWidth
+            borderWidth: this.props.logo.borderWidth,
+            padding: this.props.logo.padding
         }
     }
 
@@ -85,7 +86,8 @@ class TextEditSidebar extends Component {
           this.state.borderColor,
           this.state.borderRadius,
           this.state.border,
-          this.state.borderWidth);
+          this.state.borderWidth,
+          this.state.padding);
     }
 
     render() {
@@ -121,7 +123,7 @@ class TextEditSidebar extends Component {
                                         value={this.props.logo.backgroundColor}
                                 />
                             </div>
-                        </div> // FIXME: Need to fix border styling
+                        </div>
                         <div className="row">
                             <div className="col s4">Border Color:</div>
                             <div className="col s8">
@@ -153,6 +155,14 @@ class TextEditSidebar extends Component {
                                 <input type="range" min="4" max="100" 
                                     onChange={this.handleThicknessChange}
                                     value={this.props.logo.borderWidth} />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col s4">Padding:</div>
+                            <div className="col s8">
+                                <input type="range" min="4" max="100" 
+                                    onChange={this.handlePaddingChange}
+                                    value={this.props.logo.padding} />
                             </div>
                         </div>
                     </div>
