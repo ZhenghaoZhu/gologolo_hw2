@@ -23,14 +23,14 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper" id = "nav-wrapper">
           <div  className='brand-logo' 
-                style={ {cursor: "pointer"} }
+                id = "brand-logo"
                 onClick={this.handleGoHome}>
             goLogoLo
           </div>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li style={ {cursor: "pointer"} }>&#128465;</li>
+            <li id = "deleteLogoButton">🗑️</li>
           </ul>
         </div>
       </nav>

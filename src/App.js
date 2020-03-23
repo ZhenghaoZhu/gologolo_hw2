@@ -21,10 +21,16 @@ export const TransactionType = {
 
 // DEFAULT VALUES FOR A BRAND NEW LOGO
 export const LogoDefaults = {
-  TEXT : "goLogoLo Logo",
-  TEXT_COLOR : "#FF0000",
-  FONT_SIZE : 24
-}
+  TEXT: "goLogoLo Logo",
+  TEXT_COLOR: "#FF0000",
+  BORDER_COLOR: "000000",
+  FONT_SIZE: 20,
+  BORDER_RADIUS: 10,
+  BACKGROUND_COLOR: "000000", 
+  BORDER_WIDTH: 3,
+  PADDING: 10,
+  MARGIN: 5
+};
 
 // App IS THE ROOT REACT COMPONENT
 class App extends Component {
@@ -228,8 +234,14 @@ class App extends Component {
     let newLogo = {
       key: this.getHighKey(this.state.logos),
       text: LogoDefaults.TEXT,
+      fontSize: LogoDefaults.FONT_SIZE,
       textColor: LogoDefaults.TEXT_COLOR,
-      fontSize: LogoDefaults.FONT_SIZE
+      borderColor: LogoDefaults.BORDER_COLOR,
+      backgroundColor: LogoDefaults.BACKGROUND_COLOR,
+      borderRadius: LogoDefaults.BORDER_RADIUS,
+      borderWidth: LogoDefaults.BORDER_WIDTH,
+      padding: LogoDefaults.PADDING,
+      margin: LogoDefaults.MARGIN
     }
     return newLogo;
   }

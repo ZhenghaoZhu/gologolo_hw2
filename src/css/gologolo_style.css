@@ -58,3 +58,19 @@ body {
 #recentWorkHomeScreen {
   text-decoration: underline;
 }
+
+#nav-wrapper {
+  background-color: #264553;
+}
+
+#brand-logo {
+  padding-left: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+#deleteLogoButton {
+  font-size: 30px;
+  width: 50px;
+  cursor: pointer;
+}
