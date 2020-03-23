@@ -311,8 +311,13 @@ class App extends Component {
   }
 
   afterLogoDeleted = () => {
-    console.log("App afterLogoDeleted logos: " + this.logosToString(this.state.logos));
-    // FIRST GO HOME
+    //console.log("App updated lists: " + this.listsToString(this.state.todoLists));
+    console.log("App updated currentLogo: " + this.logoToString(this.state.currentLogo));
+
+    // WILL THIS WORK? @todo
+    let logosString = JSON.stringify(this.state.logos);
+    localStorage.setItem("recent_work", logosString);
+
     this.goToHomeScreen();
   }
 
@@ -366,7 +371,7 @@ class App extends Component {
           changeLogoCallback={this.buildChangeLogoTransaction}  // TRANSACTION CALLBACK
           undoCallback={this.undo}                        // TRANSACTION CALLBACK                       
           canUndo={this.canUndo}                          // TRANSACTION CALLBACK
-
+          deleteLogo = {this.deleteLogo}
         />;
       default:
         return <div></div>;

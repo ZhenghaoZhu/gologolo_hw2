@@ -30,7 +30,7 @@ class Navbar extends React.Component {
             goLogoLo
           </div>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li id = "deleteLogoButton">🗑️</li>
+            <li id = "deleteLogoButton" onClick = {this.props.deleteLogo.bind(this, this.props.logo.key)}>🗑️</li>
           </ul>
         </div>
       </nav>
