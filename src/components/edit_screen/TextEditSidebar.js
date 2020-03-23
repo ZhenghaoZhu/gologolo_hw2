@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 
 class TextEditSidebar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         // WE'LL MANAGE THE UI CONTROL
         // VALUES HERE
         this.state = {
-            textColor : "#FF0000",
-            fontSize : 24,
-            backgroundColor: "#0000FF",
-            borderColor: "#F0000F",
-            borderRadius: 24,
+            text: this.props.logo.text,
+            textColor : this.props.logo.textColor,
+            fontSize : this.props.logo.fontSize,
+            backgroundColor: this.props.logo.backgroundColor,
+            borderColor: this.props.logo.borderColor,
+            borderRadius: this.props.logo.borderRadius,
+            borderWidth: this.props.logo.borderWidth
         }
     }
 
@@ -82,7 +84,8 @@ class TextEditSidebar extends Component {
           this.state.backgroundColor, 
           this.state.borderColor,
           this.state.borderRadius,
-          this.state.border);
+          this.state.border,
+          this.state.borderWidth);
     }
 
     render() {
@@ -142,6 +145,14 @@ class TextEditSidebar extends Component {
                                 <input type="range" min="4" max="100" 
                                     onChange={this.handleBorderRadiusChange}
                                     value={this.props.logo.borderRadius} />
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col s4">Border Thickness:</div>
+                            <div className="col s8">
+                                <input type="range" min="4" max="100" 
+                                    onChange={this.handleThicknessChange}
+                                    value={this.props.logo.borderWidth} />
                             </div>
                         </div>
                     </div>
