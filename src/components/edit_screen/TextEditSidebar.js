@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Range } from 'react-materialize'
+import { Range, Button } from 'react-materialize'
 import M from 'materialize-css'
 
 class TextEditSidebar extends Component {
@@ -24,6 +24,10 @@ class TextEditSidebar extends Component {
 
     handleUndo = () => {
         this.props.undoCallback();
+    }
+
+    handleRedo = () => {
+        this.props.redoCallback();
     }
 
     handleTextColorChange = event => {
@@ -101,12 +105,17 @@ class TextEditSidebar extends Component {
         let undoClass = "waves-effect waves-light btn-small";
         if (undoDisabled)
             undoClass += " disabled";
+        let redoDisabled = !this.props.canRedo();
+        let redoClass = "waves-effect waves-light btn-small";
+        if(redoDisabled)
+            redoClass += " disabled";
         return (
             <div className="card-panel col s4">
                 <div className="card blue-grey darken-1">
                     <div className="card-content white-text">
-                        <button className="waves-effect waves-light btn-small">&#9998;</button>
-                        <button className={undoClass} onClick={this.handleUndo}>Undo</button>
+                        <Button >&#9998;</Button>
+                        <Button className={undoClass} onClick={this.handleUndo} id = "undoButton">Undo</Button>
+                        <Button className = {redoClass} onClick = {this.handleRedo} id = "redoButton">Redo</Button>
                     </div>
                 </div>
                 <div className="card blue-grey darken-1">

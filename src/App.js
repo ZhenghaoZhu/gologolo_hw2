@@ -22,11 +22,11 @@ export const TransactionType = {
 // DEFAULT VALUES FOR A BRAND NEW LOGO
 export const LogoDefaults = {
   TEXT: "goLogoLo Logo",
-  TEXT_COLOR: "#FF0000",
-  BORDER_COLOR: "000000",
+  TEXT_COLOR: "#000000",
+  BORDER_COLOR: "#73620F",
   FONT_SIZE: 20,
   BORDER_RADIUS: 10,
-  BACKGROUND_COLOR: "000000", 
+  BACKGROUND_COLOR: "#F71234", 
   BORDER_WIDTH: 3,
   PADDING: 10,
   MARGIN: 5
@@ -187,6 +187,10 @@ class App extends Component {
     this.tps.undoTransaction();
   }
 
+  redo = () => {
+    this.tps.doTransaction();
+  }
+
   /**
    * resetTransactions - This method clears all the transactions in
    * the undo/redo stack, which should be done every time the logo
@@ -203,6 +207,10 @@ class App extends Component {
    */
   canUndo = () => {
     return this.tps.hasTransactionToUndo();
+  }
+
+  canRedo = () => {
+    return this.tps.hasTransactionToRedo();
   }
 
   // THERE ARE SEVEN FUNCTIONS FOR UPDATING THE App state, TWO OF
@@ -372,6 +380,9 @@ class App extends Component {
           undoCallback={this.undo}                        // TRANSACTION CALLBACK                       
           canUndo={this.canUndo}                          // TRANSACTION CALLBACK
           deleteLogo = {this.deleteLogo}
+          redoCallback = {this.redo}
+          canRedo = {this.canRedo}
+
         />;
       default:
         return <div></div>;
