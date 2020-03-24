@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 :root {
   /* 
       FIRST WE'LL DEFINE OUR SWATCHES, i.e. THE COMPLEMENTARY
@@ -15,7 +17,7 @@
 
 body {
   background-color: var(--swatch-foundation);
-  font-family: 'Lexend Exa';
+  font-family: 'Open Sans', sans-serif;
 }
 
 #home_banner_container {
@@ -47,8 +49,10 @@ body {
 
 #home_logo_link {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
+  white-space: pre-wrap;
+  margin-bottom: 3px;
 }
 
 #home_logo_link:hover {
@@ -61,6 +65,7 @@ body {
 
 #nav-wrapper {
   background-color: #264553;
+  height: 70px;
 }
 
 #brand-logo {
@@ -71,8 +76,11 @@ body {
 
 #deleteLogoButton {
   font-size: 30px;
-  width: 50px;
+  width: 70px;
+  height: 60px;
   cursor: pointer;
+  margin-right: 30px;
+  padding-right: 30px;
 }
 
 #undoButton {
@@ -83,5 +91,18 @@ body {
 #redoButton {
   margin-left: 5px;
   width: 130px
+}
+
+#editTextInput {
+  margin-top: 15px;
+  font-size: 24px
+}
+
+#editTextSubmitButton {
+  margin-right: 10px
+}
+
+#logoTextDiv {
+  white-space: pre;
 }
 

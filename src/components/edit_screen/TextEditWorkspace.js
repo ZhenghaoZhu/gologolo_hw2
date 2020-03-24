@@ -19,7 +19,7 @@ class TextEditWorkspace extends Component {
             }
         }
         return (
-            <div className="col s8"
+            <div className="col s8" id = "logoTextDiv"
                 style={ styles.container }>
                 {this.props.logo.text}
             </div>

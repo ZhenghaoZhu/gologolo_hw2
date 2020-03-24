@@ -1,4 +1,6 @@
 import React from 'react'
+import { Modal, Button} from 'react-materialize'
+import M from 'materialize-css'
 
 class Navbar extends React.Component {
   constructor() {
@@ -20,6 +22,11 @@ class Navbar extends React.Component {
     this.props.goToHomeCallback();
   }
 
+  confirmLogoDeletion = () => {
+    var logo = this.props.logo.key
+    this.setState(this.props.deleteLogo.bind(this, logo))
+  }
+
   render() {
     return (
       <nav>
@@ -30,8 +37,31 @@ class Navbar extends React.Component {
             goLogoLo
           </div>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li id = "deleteLogoButton" onClick = {this.props.deleteLogo.bind(this, this.props.logo.key)}>🗑️</li>
+            <Button id = "deleteLogoButton" href = "#confirmDeletionModal" node = "button" className="modal-trigger"><i class = "material-icons">🗑️</i></Button>
           </ul>
+          <Modal
+            actions={[
+              <Button flat modal="confirm" node="button" waves="blue" onClick = {this.confirmLogoDeletion}>Confirm</Button>,
+              <Button flat modal="close" node="button" waves="blue" >Cancel</Button>
+            ]}
+            bottomSheet={false}
+            fixedFooter={false}
+            header="Delete current logo?"
+            id="confirmDeletionModal"
+            options={{
+              dismissible: true,
+              endingTop: '35%',
+              inDuration: 250,
+              onCloseEnd: null,
+              onCloseStart: null,
+              onOpenEnd: null,
+              onOpenStart: null,
+              opacity: 0.5,
+              outDuration: 250,
+              preventScrolling: true,
+              startingTop: '4%'
+            }}
+          />
         </div>
       </nav>
     )

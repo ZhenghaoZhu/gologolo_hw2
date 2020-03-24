@@ -40,7 +40,7 @@
             "border": "solid",
             "borderColor": "#abcdef",
             "borderRadius": 15,
-            "borderThickness": 2,
+            "borderWidth": 2,
             "padding": 20,
             "margin": 10
         },
@@ -53,7 +53,7 @@
             "border": "solid",
             "borderColor": "#004488",
             "borderRadius": 10,
-            "borderThickness": 5,
+            "borderWidth": 5,
             "padding": 5,
             "margin": 5
         },
@@ -66,7 +66,7 @@
             "border": "solid",
             "borderColor": "#000033",
             "borderRadius": 1,
-            "borderThickness": 12,
+            "borderWidth": 12,
             "padding": 5,
             "margin": 10
         }
