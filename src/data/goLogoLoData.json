@@ -38,9 +38,9 @@
             "textColor": "#121278",
             "backgroundColor": "#654321",
             "border": "solid",
-            "borderColor": "#abcdef",
+            "borderColor": "#121278",
             "borderRadius": 15,
-            "borderWidth": 2,
+            "borderWidth": 0,
             "padding": 20,
             "margin": 10
         },
@@ -51,9 +51,9 @@
             "textColor": "#13579b",
             "backgroundColor": "#b97531",
             "border": "solid",
-            "borderColor": "#004488",
+            "borderColor": "#13579b",
             "borderRadius": 10,
-            "borderWidth": 5,
+            "borderWidth": 0,
             "padding": 5,
             "margin": 5
         },
@@ -64,9 +64,9 @@
             "textColor": "#bbeeee",
             "backgroundColor": "#224400",
             "border": "solid",
-            "borderColor": "#000033",
+            "borderColor": "#bbeeee",
             "borderRadius": 1,
-            "borderWidth": 12,
+            "borderWidth": 0,
             "padding": 5,
             "margin": 10
         }

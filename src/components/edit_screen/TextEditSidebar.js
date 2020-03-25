@@ -103,7 +103,9 @@ class TextEditSidebar extends Component {
       handleThicknessChange = event => {
         console.log("handleThicknessChange to " + event.target.value);
         this.setState(
-          { borderWidth: event.target.value },
+          { borderWidth: event.target.value,
+            border: "solid",
+            borderColor: this.props.logo.borderColor },
           this.completeUserEditing
         );
       };
@@ -223,7 +225,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Font Size:</div>
                             <div className="col s8">
-                                <Range min="4" max= "50"
+                                <Range min="4" max= "60"
                                     onChange={this.handleFontSizeChange}
                                     value={this.props.logo.fontSize} />
                             </div>
@@ -239,7 +241,7 @@ class TextEditSidebar extends Component {
                         <div className="row">
                             <div className="col s4">Border Thickness:</div>
                             <div className="col s8">
-                                <Range min="4" max= "20"
+                                <Range min="0" max= "20"
                                     onChange={this.handleThicknessChange}
                                     value={this.props.logo.borderWidth} />
                             </div>
