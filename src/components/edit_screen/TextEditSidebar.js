@@ -139,6 +139,10 @@ class TextEditSidebar extends Component {
           this.state.width);
     }
 
+    clearEditModalTextField = () => {
+      document.getElementById("editTextInput").value = ""
+    }
+
     render() {
         let undoDisabled = !this.props.canUndo();
         let undoClass = "waves-effect waves-light btn-small";
@@ -164,7 +168,10 @@ class TextEditSidebar extends Component {
                                     onClick={this.handleEditTextChange}>
                                     Submit
                             </Button>,
-                            <Button modal="close" node="button" waves="green">Close</Button>
+                            <Button modal="close" 
+                                    node="button" 
+                                    waves="green"
+                                    onClick = {this.clearEditModalTextField}>Close</Button>
                           ]}
                           bottomSheet={false}
                           fixedFooter={false}

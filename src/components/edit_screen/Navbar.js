@@ -41,8 +41,8 @@ class Navbar extends React.Component {
           </ul>
           <Modal
             actions={[
-              <Button flat modal="confirm" node="button" waves="blue" onClick = {this.confirmLogoDeletion}>Confirm</Button>,
-              <Button flat modal="close" node="button" waves="blue" >Cancel</Button>
+              <Button id = "deleteLogoConfirmButton" modal="confirm" node="button" waves="blue" onClick = {this.confirmLogoDeletion}>Confirm</Button>,
+              <Button id = "deleteLogoCancelButton" modal="close" node="button" waves="blue" >Cancel</Button>
             ]}
             bottomSheet={false}
             fixedFooter={false}
